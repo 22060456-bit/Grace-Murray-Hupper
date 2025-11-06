@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('img1.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+#fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: -1;
+}
+
+#contenido {
+  max-width: 70%;
+  background-color: white;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  color: black;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-family: 'Georgia', serif;
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* ===== Contenedor de texto e imagen ===== */
+#texto-imagen {
+  display: flex;
+  flex-direction: column; /* siempre columna */
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#texto-imagen p {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+#texto-imagen img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-top: 15px;
+}
+
+/* Imagen principal dentro de contenido */
+#contenido > img {
+  display: block;
+  margin: 30px auto 0 auto;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== Botones ===== */
+#botones {
+  text-align: center; /* centrado */
+  margin-top: 20px;
+}
+
+#botones a {
+  display: inline-block;
+  background-color: #1e3a8a; 
+  color: white;              
+  padding: 10px 25px;
+  border: 2px solid #1e3a8a; 
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 5px;
+}
+
+#botones a:hover {
+  background-color: #2a4dcb;
+  border-color: #2a4dcb;
+  transform: scale(1.05);
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 767px) {
+  #contenido {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  #texto-imagen img {
+    max-width: 80%;
+    margin-top: 15px;
+  }
+}
